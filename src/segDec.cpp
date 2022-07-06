@@ -102,4 +102,4 @@ void SEG::countDown(int v, int m){
             delay(100);
             clear();
         }
-}
+}    
