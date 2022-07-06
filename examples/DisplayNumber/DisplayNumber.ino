@@ -2,7 +2,7 @@
 
 int segPins[7] = {2,3,4,6,7,8,9};
 
-SEG 7SEG(segPins[],1);
+SEG SEG7(segPins[],1);
 
 byte num;
 int n;
@@ -15,9 +15,9 @@ void loop(){
         num = Serial.read();
         if (num >= 0x0 && num <= 0xf ) n = num;
 
-        7SEG.clear();
+        SEG7.clear();
     }
 
-    7SEG.display(n);
+    SEG7.display(n);
     delay(100);
 }

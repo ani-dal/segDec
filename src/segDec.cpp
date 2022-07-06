@@ -56,7 +56,7 @@ void SEG::countUp(int n){
     
     for (int j = 0;j<=n;j++){
         display(j);
-        delay(100);
+        delay(1000);
         clear();
     }
 }
@@ -65,7 +65,7 @@ void SEG::countDown(int n){
     
     for (int j = n;j>=0;j--){
         display(j);
-        delay(100);
+        delay(1000);
         clear();
     }
 }
@@ -82,7 +82,7 @@ void SEG::countUp(int v, int m){
     }
     for (int j =_s ;j<=_l;j++){
             display(j);
-            delay(100);
+            delay(1000);
             clear();
         }
 }
@@ -99,7 +99,7 @@ void SEG::countDown(int v, int m){
     }
     for (int j =_l ;j>=_s;j--){
             display(j);
-            delay(100);
+            delay(1000);
             clear();
         }
 }    
