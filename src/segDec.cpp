@@ -1,4 +1,4 @@
-
+/*
 
 SEG::SEG(int a,int b,int c,int d,int e,int f,int g,int dec,int mode){
     _mode = mode;
@@ -8,7 +8,7 @@ SEG::SEG(int a,int b,int c,int d,int e,int f,int g,int dec,int mode){
         pinMode(_segPins[c],OUTPUT);
     }
 }
-
+*/
 SEG::SEG(int a,int b,int c,int d,int e,int f,int g,int mode){
     _mode = mode;
     _segPins[7] = {a,b,c,d,e,f,g};
@@ -16,7 +16,7 @@ SEG::SEG(int a,int b,int c,int d,int e,int f,int g,int mode){
         pinMode(_segPins[c],OUTPUT);
     }
 }
-
+/*
 SEG::SEG(int segPins[7],int dec,int mode){
     _mode = mode;
     pinMode(dec,OUTPUT);
@@ -34,8 +34,7 @@ SEG::SEG(int segPins[7],int mode){
     }
 }
 
-
-
+*/
 void SEG::display(int n){
     _n = n;
     for (int i = 0; i <7; i++)
