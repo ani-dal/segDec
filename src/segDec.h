@@ -12,28 +12,34 @@
 
 class SEG{
   public:
-    SEG(int,int,int,int,int,int,int,int,int); // pins, dot, mode
+    SEG(int,int,int,int,int,int,int,int,int);//pins, dot, mode
     SEG(int,int,int,int,int,int,int,int); // pins, mode
-    SEG(int[],int,int); // pin array, dot, mode
-    SEG(int[],int); // pin array, mode
+    SEG(int[],int,int);// pins, dot, mode
+    SEG(int[],int);//pins, mode
+
     void clear();
     void display(int);
     void countUp(int);
     void countDown(int);
+    void countup(int,int);
+    void countdown(int,int);
+
     void countUp(int,int);
     void countDown(int,int);
+    void countup(int,int,int);
+    void countdown(int,int,int);
 
 
  private:
-    int _a,_b,_c,_d,_e,_f,_g,dec; 
+   
+  
+  int _segPins[7];
+  int _mode;
 
-    int _mode;// common cathode(grnd) ->1 
-              // common anode(vcc) ->0
+ 
+    int _s,_l;
 
-    int _segPins [7];
-    int _n,_s,_l;
-
-    byte seg [16][7] = {{1,1,1,1,1,1,0}, //0
+int  seg [16][7] = {{1,1,1,1,1,1,0}, //0
                     {0,1,1,0,0,0,0}, //1
                     {1,1,0,1,1,0,1}, //2
                     {1,1,1,1,0,0,1}, //3
